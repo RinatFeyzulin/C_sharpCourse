@@ -14,4 +14,5 @@ int DeleteNum(int Num)
     return res;
 }
 
-Console.WriteLine(DeleteNum(a));
+if(a<100) Console.WriteLine("Третьей цифры нет");
+else Console.WriteLine(DeleteNum(a));
