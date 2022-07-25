@@ -2,6 +2,9 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
+Console.WriteLine("Write a number: ");
+int a=int.Parse(Console.ReadLine());
+
 void Quarters(int n)
 {
 for(int i=1;i<=n;i++)
@@ -10,4 +13,4 @@ for(int i=1;i<=n;i++)
 }
 }
 
-Quarters(5);
+Quarters(a);
