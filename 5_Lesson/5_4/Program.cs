@@ -5,7 +5,7 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-int [] arr = new int [12];
+int [] arr = new int [7];
 Random random = new Random();
 void arrRandom(int []arr)
 {
@@ -19,12 +19,14 @@ void arrRandom(int []arr)
 void ProductOfNumbers(ref int []arr)
 {
     int j=arr.Length -1;
-    int [] myArray = new int[arr.Length/2];
+    int [] myArray = new int[arr.Length/2 + arr.Length % 2];
     for (int i = 0; i < arr.Length/2; i++)
     {
         myArray[i] = arr[i] * arr[j];
         j--;
     }
+    if(arr.Length % 2 == 1)
+    myArray[^1] = arr[(arr.Length/2 + arr.Length % 2)-1];
     arr = myArray;
 }
 
