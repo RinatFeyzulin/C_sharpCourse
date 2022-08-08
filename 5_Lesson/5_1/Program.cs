@@ -1,10 +1,11 @@
-﻿ int [] arr = new int [12];
+﻿// 
+int [] arr = new int [12];
 Random random = new Random();
-void arrRandom(int []arr)
+void arrRandomPos(int []arr)
 {
     for (int i = 0; i < arr.Length; i++)
 {
-    arr[i] = random.Next(-9,9);
+    arr[i] = random.Next(1,9);
 }
 
 for (int i = 0; i < arr.Length; i++)
@@ -14,7 +15,7 @@ for (int i = 0; i < arr.Length; i++)
 Console.WriteLine();
 }
 
-void PozNeg(int []arr)
+void Neg(int []arr)
 {
    
     for (int i = 0; i < arr.Length; i++)
@@ -24,5 +25,5 @@ void PozNeg(int []arr)
     
 }
 
-arrRandom(arr);
-PozNeg(arr);
+arrRandomPos(arr);
+Neg(arr);
