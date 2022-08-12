@@ -11,7 +11,7 @@ void Fibonnachi(int n)
     for (int i = 0; i < n; i++)
     {
         Console.Write($"{f} ");
-        (f,f1) = (f1,f+f1);
+        (f,f1) = (f1,f+f1);//Кортеж))
     }
 }
 
