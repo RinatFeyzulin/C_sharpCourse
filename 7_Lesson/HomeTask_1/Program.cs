@@ -20,15 +20,15 @@ void Print(double [,] arr)
     Console.WriteLine();
 }
 
-double [,] arrRandomNumber(double[,]arr,int row, int column)
+double [,] arrRandomNumber(double[,]arr)
 
 {
-   double [,]arrResult = new double[row,column];
+   double [,]arrResult = new double[arr.GetLength(0),arr.GetLength(1)];
    Random random = new Random();
 
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j <column; j++)
+        for (int j = 0; j <arr.GetLength(1); j++)
         {
             arr[i,j] = Math.Round(random.NextDouble()*(10+20)-10,2); 
         }
@@ -38,5 +38,5 @@ double [,] arrRandomNumber(double[,]arr,int row, int column)
 
 double [,] myArray = new double[5,5];
 
-arrRandomNumber(myArray,5,5);
+arrRandomNumber(myArray);
 Print(myArray);
