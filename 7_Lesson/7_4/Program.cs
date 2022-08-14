@@ -48,8 +48,8 @@ string FindingAnElement(int[,]arr,int n)
         {
             if(arr[i,j] == n) 
             {  
-                indexI = i+1;
-                indexJ = j+1;
+                int indexI = i+1;
+                int indexJ = j+1;
                 elementIndexResult = "число находится на позиции "  + indexI + ","  +  indexJ;
                 return elementIndexResult;
             } 
