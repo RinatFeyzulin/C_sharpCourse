@@ -13,7 +13,7 @@ void Print(double [,] arr)
     {
         for (int j = 0; j <columnSize; j++)
         {
-            Console.Write($"{arr[i,j]} ");
+            Console.Write($" {arr[i, j], 6} |");
         }
         Console.WriteLine();
     }
@@ -23,20 +23,20 @@ void Print(double [,] arr)
 double [,] arrRandomNumber(double[,]arr,int row, int column)
 
 {
-   double [,]arr = new double[row,column];
+   double [,]arrResult = new double[row,column];
    Random random = new Random();
 
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j <column; j++)
         {
-            arr[i,j] = Math.Round(random.NextDouble(10+20)-10,2); 
+            arr[i,j] = Math.Round(random.NextDouble()*(10+20)-10,2); 
         }
     }
-    return arr;
+    return arrResult;
 }
 
-double [,] myArray = null;
+double [,] myArray = new double[5,5];
 
 arrRandomNumber(myArray,5,5);
 Print(myArray);
