@@ -33,24 +33,27 @@ int [,] ArrayRandom(int row, int column)
     return arr;
 }
 
-int [,] Average(int [,] arr)
+void Average(int [,] arr)
 {
   
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
 
-    int [,] arrAverage = new int [row,column];
-
-    for (int i = 0; i <row; i++)
+    // int [,] arrAverage = new int [row,column];
+    // try
+    // {
+    if(row>column||column>row) Console.WriteLine("Index was outside the bounds of the array.");
+    else
     {
-        for (int j = 0; j < column; j++)
-    {        
-        (arrAverage[i, j]) = ( arr[j,i]);        
-    
+           for (int i = 0; i <row; i++)
+            {
+                for (int j = 0; j < column; j++)
+                {        
+                    Console.Write($"{arr[j,i]} ");
+                }
+                Console.WriteLine();
+            }
     }
-    }
-    
-    return arrAverage;
 }
 
 int [,] myArray = ArrayRandom(4,4);
@@ -58,4 +61,4 @@ Print(myArray);
 
 Console.WriteLine();
 
-Print(Average(myArray));
+Average(myArray);
