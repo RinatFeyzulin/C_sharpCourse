@@ -7,5 +7,4 @@ void ValueSet(int num)
     ValueSet(num-1);
     Console.Write($"{num} ");
 }
-
 ValueSet(5);
