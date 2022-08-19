@@ -50,7 +50,6 @@ int [] MinSearch (int [,] array)
                 index [1] =j; 
             } 
         } 
-         
     } 
     return index; 
 } 
